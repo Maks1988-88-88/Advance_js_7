@@ -55,7 +55,7 @@ function createPostCard(posts) {
     newDiv.append(head);
     head.classList.add("post__title");
     head.textContent = post.title;
-    // console.log(head);
+    
 
     const article = document.createElement("p");
     newDiv.append(article);
