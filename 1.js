@@ -38,10 +38,7 @@ const posts = [
 
 
 function createPostCard(posts) {
-
-for (let i = 0; i < posts.length; i++ ) {
-    let post = posts[i];
-
+  posts.forEach(post => {
     const body = document.body;
     const newDiv = document.createElement("div");
     body.prepend(newDiv);
@@ -52,29 +49,26 @@ for (let i = 0; i < posts.length; i++ ) {
     img.classList.add("post__image");
     img.setAttribute("alt", "my image");
     img.setAttribute("src", post.img);
-    console.log(img);
+    // console.log(img);
 
     const head = document.createElement("h2");
     newDiv.append(head);
     head.classList.add("post__title");
     head.textContent = post.title;
-    console.log(head);
+    // console.log(head);
 
     const article = document.createElement("p");
     newDiv.append(article);
     article.classList.add("post__text");
     article.textContent = post.text;
-    console.log(article);
+    // console.log(article);
 
     const button = document.createElement("a");
     newDiv.append(button);
     button.classList.add("button");
     button.textContent = "Read more";
     button.href = post.link;
-
-
-    console.log(post);
-}
+  });
 }
 
 createPostCard(posts);
