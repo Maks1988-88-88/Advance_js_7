@@ -39,9 +39,9 @@ const posts = [
 
 function createPostCard(posts) {
   posts.forEach(post => {
-    const body = document.body;
+    const body = document.querySelector(".post");
     const newDiv = document.createElement("div");
-    body.prepend(newDiv);
+    body.append(newDiv);
     newDiv.classList.add("post");
 
     const img = document.createElement("img");
@@ -72,5 +72,3 @@ function createPostCard(posts) {
 }
 
 createPostCard(posts);
-
-
